@@ -1,0 +1,12 @@
+{
+  "name": "bluesky-petitions",
+  "version": "1.0.0",
+  "description": "Bluesky bot for UK government petitions",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "processPetitions": "node --env-file=.env index.js"
+  },
+  "author": "Matt Eason",
+  "license": "MIT"
+}

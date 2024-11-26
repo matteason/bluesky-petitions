@@ -134,7 +134,16 @@ async function sendPost(d, text, url, linkTitle, linkDescription, hashtag = null
     const textEncoder = new TextEncoder();
 
     facets.push(
-b
+      {
+        index: {
+          byteStart: textEncoder.encode(`${text}\r\n\r\n`).length,
+          byteEnd: textEncoder.encode(`${text}\r\n\r\n${hashtag}`).length,
+        },
+        features: [{
+          $type: 'app.bsky.richtext.facet#tag',
+          tag: hashtag.replace('#', '')
+        }]
+      }
     )
   }
 

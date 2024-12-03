@@ -1,12 +1,16 @@
 {
   "name": "bluesky-petitions",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Bluesky bot for UK government petitions",
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "processPetitions": "node --env-file=.env index.js"
+    "processPetitions": "node --env-file=.env index.js",
+    "test": "node --env-file=.env.dev index.js"
   },
   "author": "Matt Eason",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "node-html-to-image": "^5.0.0"
+  }
 }

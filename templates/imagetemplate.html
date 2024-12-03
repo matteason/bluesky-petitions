@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+      body {
+        width: 1200px;
+        height: 630px;
+        font-family: Inter, sans-serif;
+        font-size: 40px;
+        padding: 0;
+        margin: 0;
+      }
+
+      * {
+        font-size: inherit;
+      }
+
+      main {
+        width: 1200px;
+        height: 630px;
+        padding: 75px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 75px;
+        background: black;
+        background-size: cover;
+        color: white;
+      }
+
+      main.greenborder {
+        box-shadow: inset 0 -20px rgb(0, 136, 0);
+      }
+
+      blockquote {
+        margin: 0;
+        flex-grow: 1;
+        align-content: center;
+        text-wrap: pretty;
+      }
+
+      h1 {
+        font-weight: 600;
+        margin: 0;
+        padding: 0;
+        text-wrap: pretty;
+      }
+
+      h1 div {
+        font-weight: 400;
+        opacity: 0.75;
+      }
+    </style>
+  </head>
+  <body>
+    <main style="background-image: url({{backgroundimage}})" class="{{class}}">
+      <blockquote>“{{quote}}”</blockquote>
+      <h1>
+        <div>{{state}}</div>
+        {{name}}
+      </h1>
+    </main>
+  </body>
+</html>
